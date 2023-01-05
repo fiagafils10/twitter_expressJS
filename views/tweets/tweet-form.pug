@@ -1,0 +1,16 @@
+extends ../layout
+
+block content 
+    div(class='d-flex flex-row content mx-auto')
+        div(class='profile-container ')
+            include ../includes/profile.pug
+        div(class='flex-fill')
+            form(class="card" method="post" action="/api/tweet")
+                div(class="card-header") Ecrire un tweet
+                div(class= "card-body mx-auto")
+                    div(class="form-group")
+                        textarea(class="from-control p-4 mx-auto" name="content" placeholder="what happening")
+                    div(class="")
+                        input(type="submit" value="send" class="btn btn-lg btn-primary mx-auto d-block") 
+
+
