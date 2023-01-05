@@ -7,9 +7,8 @@
   "name": "twitter_nodejs",
   "version": "1.0.0",
   "main": "app.js",
- 
   "scripts": {
-    "start": "SET PORT=4000 && nodemon app.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +20,6 @@
     "url": "https://github.com/fiagafils10/twitter_expressJS/issues"
   },
   "homepage": "https://github.com/fiagafils10/twitter_expressJS#readme",
+  "devDependencies": {},
   "description": ""
 }
