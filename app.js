@@ -1,9 +1,12 @@
 const express = require("express");
-const app = express();
 const path = require("path");
 const morgan = require("morgan");
-const port = process.env.PORT || 3000;
 const index = require ('./routes')
+require('./database/index')
+
+const app = express();
+
+
 
 app.use(morgan("short"));
 app.set("view engine", "pug");
@@ -14,5 +17,5 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(index, )// va return index qui lui meme return home
 
-app.listen(3001);
- 
+app.listen(5000);
+   
