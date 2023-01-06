@@ -5,11 +5,15 @@ block content
         div(class='profile-container ')
             include ../includes/profile.pug
         div(class='flex-fill')
-            form(class="card" method="post" action="/api/tweet")
+            form(class="card" method="post" action="/api/tweets")
                 div(class="card-header") Ecrire un tweet
                 div(class= "card-body mx-auto")
                     div(class="form-group")
                         textarea(class="from-control p-4 mx-auto" name="content" placeholder="what happening")
+
+                        if (locals.errors && errors)
+                            ul
+                                    li(class="text-danger")= errors
                     div(class="")
                         input(type="submit" value="send" class="btn btn-lg btn-primary mx-auto d-block") 
 

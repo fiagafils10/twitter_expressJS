@@ -15,3 +15,9 @@
    width: 100px;
     border-radius: 5px;
 }
+.tweet-element{
+    border-radius: 0px;
+    padding: 20px;
+    font-weight: 500;
+    
+}
