@@ -17,8 +17,8 @@ exports.tweetNew = (req, res) => {
 
 exports.tweetCreate = async (req, res, next) => {
   try {
-    const body = req.body;
-    await createTweets(body)
+    const body =  req.body;
+    createTweets(body)
     res.redirect("/tweets");
   } catch (err) {
     const errors = err.errors.content.properties.message;

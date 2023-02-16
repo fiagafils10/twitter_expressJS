@@ -1,0 +1,21 @@
+extends ../layout
+
+block content 
+    div(class='d-flex flex-row content mx-auto')
+        form(class="card" method="post" action="/users/signup")
+            div(class="card-header") inscription
+            div(class= "card-body mx-auto")
+                div(class="form-group")
+                    label Username
+                    input(class="form-control" type="text" name="username")
+                div(class="form-group")
+                    label email
+                    input(class="form-control" type="email" name="email")
+                div(class="form-group")
+                    label password
+                    input(class="form-control" type="password" name="password")
+                if (locals.errors && errors)
+                    ul
+                        li(class="text-danger")= errors
+                    div(class="w-100")
+                        input(type="submit" value="Validate" class="btn btn-lg btn-primary mx-auto d-block") 

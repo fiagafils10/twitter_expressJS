@@ -12,6 +12,9 @@ const app = express();
 app.use(morgan("short"));
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
+
+require('./config/session.config')
+
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

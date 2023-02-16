@@ -7,9 +7,12 @@ const {
 const Tweet = require("../database/models/tweet.model");
 
 router.post("/", tweetCreate);
-
-router.get("/new", tweetNew);
+// router.post("/update/:tweetId", tweetUpdate);
 
 router.get("/", tweetList);
+router.get("/new", tweetNew);
+// router.get('/edit:tweetId', tweetEdit)
+
+// router.delete('/:tweetId', tweetDelete)
 
 module.exports = router;
